@@ -49,9 +49,9 @@
    Culinary Academy
 ----------------------------------------- */
 
-	.culinary .content { position: absolute; left: 0; bottom: 0; width: 100%; background: rgba(255,255,255,0.85); }
-	.culinary .content p { width: 60%; padding: 20px; font-size: 15px; color: #555; margin: 0; }
-	.culinary .content .button { position: absolute; right: 20px; bottom: 20px; }
+	.whatwedo .content { position: absolute; left: 0; bottom: 0; width: 100%; background: rgba(255,255,255,0.85); }
+	.whatwedo .content p { width: 60%; padding: 20px; font-size: 15px; color: #555; margin: 0; }
+	.whatwedo .content .button { position: absolute; right: 20px; bottom: 20px; }
 	
 	
 /* -----------------------------------------

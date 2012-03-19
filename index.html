@@ -1,166 +1,127 @@
 
 <!DOCTYPE html>
 
+
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	
-	<!-- Uncomment to make IE8 render like IE7 -->
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
-	
-	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width" />
-	
-	<title>ZOOKD</title>
-  
-	<!-- Included CSS Files -->
-	
-	<link rel="stylesheet" type="text/css" href="stylesheets/globals.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/ui.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/orbit-1.2.3.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/reveal.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/app.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/mobile.css">
+    <html ng-app="ZOOKD">
+    <head >
+        <meta charset="utf-8" />
 
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="public/css/ie.css">
-	<![endif]-->
+        <!-- Uncomment to make IE8 render like IE7 -->
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-	
-	<!-- Included JS Files  -->
-	
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+        <!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width" />
 
-	<script src="javascripts/jquery.min.js"></script>
-	<script src="javascripts/jquery.reveal.js"></script>
-	<script src="javascripts/jquery.orbit-1.2.3.js"></script>
-	<script src="javascripts/forms.jquery.js"></script>
-	<script src="javascripts/jquery.customforms.js"></script>
-	<script src="javascripts/app.js"></script>	
-</head>
-<body>
+        <title>ZOOKD</title>
 
-<!-- Header Content -->
-<header>
-	<div class="container">
+        <!-- Included CSS Files -->
 
-            <div class="row show-on-phones">
-                <div class="four columns"><a href="#" id="mobileNav" data-reveal-id="navModal" class="right small nice button blue">Nav</a>
-                    <h1><a  href="#home">ZOOKD</a></h1>
+        <link rel="stylesheet" type="text/css" href="stylesheets/globals.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/ui.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/orbit-1.2.3.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/reveal.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/mobile.css">
+
+        <!--[if lt IE 9]>
+                <link rel="stylesheet" href="public/css/ie.css">
+        <![endif]-->
+
+
+        <!-- Included JS Files  -->
+
+        <!-- IE Fix for HTML5 Tags -->
+        <!--[if lt IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        
+    </head>
+    <body ng-controller="MainCtrl">
+        <!-- Header Content -->
+        <header>
+            <div class="container">
+
+                <div class="row show-on-phones">
+                    <div class="four columns"><a href="#" id="mobileNav" data-reveal-id="navModal" class="right small nice button blue">Nav</a>
+                        <h1><a  href="#home">ZOOKD</a></h1>
+                    </div>
+                </div>
+                <div class="row hide-on-phones">
+                    <div class="three columns">
+                        <a href="index.html"><img src="http://placehold.it/200x60" /></a>
+                    </div>
+                    <div class="nine columns">
+                        <nav>
+                            <ul>
+                                <li><a href="#/about">About</a></li>
+                                <li><a href="#cases">Case Studies</a></li>
+                                <li><a href="#/cats">Cats</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
+        </header>
+      <ng-view></ng-view>
+        <!-- Footer Content -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="four columns">
+                        <h5>Zookd pty ltd</h5>
+                        <p>Contact us for stuff</p>
+                    </div>
+                    <div class="two columns  hide-on-phones">
+                        <h5>Quick Links</h5>
+                        <p>
+                            <a href="#">Page 1</a><br />
+                            <a href="#">Page 1</a><br />
+                            <a href="#">Page 1</a><br />
+                            <a href="#">Page 1</a><br />
+                            <a href="#">Page 1</a><br />
+                        </p>
+                    </div>
+                    <div class="six columns">
+                        <h5>More contact area</h5>
+                        <h3>(+61) 425-2357</h3>
+                        <p>More blurby goodness. Here is some text lalala</p>
+                        <a href="#" class="nice radius blue button">Contact Us &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="navModal" class="reveal-modal">
+            <h3>ZOOKD</h3>
+            <dl class="nice tabs vertical">
+                <dd><a href="#home" class="main"><b>HOME</b></a></dd>
+                <dd><a href="#about" class="main"><b>About</b></a></dd>
+                <dd><a href="#performance" class="main"><b>Case Studies</b></a></dd>
+                <dd><a href="#planning" class="main"><b>Cats</b></a></dd>
+                <dd><a href="#marketing" class="main"><b>Blog</b></a></dd>
+                <dd><a href="#inventory" class="main"><b>Contact Us</b></a></dd>
+            </dl>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+    </body>
+        <script src="javascripts/angular-1.0.0rc1.min.js"  ng-autobind></script>    
+        <script src="javascripts/jquery.min.js"></script>
+        <script src="javascripts/jquery.reveal.js"></script>
+        <script src="javascripts/jquery.orbit-1.2.3.js"></script>
+        <script src="javascripts/forms.jquery.js"></script>
+        <script src="javascripts/jquery.customforms.js"></script>
+        <script src="javascripts/app.js"></script>
+        <script src="javascripts/angular/services.js"></script>
+        <script src="javascripts/angular/controllers.js"></script>
+        <script src="javascripts/angular/filters.js"></script>
+        <script src="javascripts/angular/directives.js"></script>
 
-		<div class="row hide-on-phones">
-			<div class="three columns">
-				<a href="index.html"><img src="http://placehold.it/200x60" /></a>
-			</div>
-			<div class="nine columns">
-				<nav>
-					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#cases">Case Studies</a></li>
-						<li><a href="#cats">Cats</a></li>
-						<li><a href="#blog">Blog</a></li>
-						<li><a href="#contact">Contact Us</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	
-	</div>
-</header>
-	<div class="container">
-		<div class="row hide-on-phones">
-			<div class="twelve columns">
-			
-				<div class="jumbotron homepage">
-					<img src="http://placehold.it/940x300" class="bg" />
-					<div class="content">
-						<blockquote>"ZOOKD is freaking awesome" <cite>Some Dude</cite></blockquote>
-						<h1>Everyone likes ZOOKD. Best. Name. Ever.</h1>
-						<a href="#find-out-more" class="large radius nice blue button">Find Out More</a>
-					</div>
-					
-					<a href="#" id="prev" class="slider">&larr;</a>
-					<a href="#" id="next" class="slider">&rarr;</a>
-				</div>
-			
-			</div>
-		</div>	
-		
-		<div class="row">
-			<div class="four columns">
-				<a href="#"><img src="http://placehold.it/400x300" /></a>
-				<h3><a href="#">What have done</a></h3>
-			</div>
-			<div class="four columns">
-				<a href="#"><img src="http://placehold.it/400x300" /></a>
-				<h3><a href="#">How we did it</a></h3>
-			</div>
-			<div class="four columns">
-				<a href="#"><img src="http://placehold.it/400x300" /></a>
-				<h3><a href="#">Where we are</a></h3>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="twelve columns">
-				<div class="blog panel">
-					<h4>Blog</h4>
-					<a href="#blog">A Blarg Post perhaps? &larr;</a>
-				</div>
-			</div>
-		</div>
-		
-		
-	</div><!-- container -->
-<!-- Footer Content -->
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="four columns">
-					<h5>Zookd pty ltd</h5>
-					<p>Contact us for stuff</p>
-				</div>
-				<div class="two columns  hide-on-phones">
-					<h5>Quick Links</h5>
-					<p>
-						<a href="#">Page 1</a><br />
-						<a href="#">Page 1</a><br />
-						<a href="#">Page 1</a><br />
-						<a href="#">Page 1</a><br />
-						<a href="#">Page 1</a><br />
-					</p>
-				</div>
-				<div class="six columns">
-					<h5>More contact area</h5>
-					<h3>(+61) 425-2357</h3>
-					<p>More blurby goodness. Here is some text lalala</p>
-					<a href="#" class="nice radius blue button">Contact Us &rarr;</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-<div id="navModal" class="reveal-modal">
-        <h3>ZOOKD</h3>
-        <dl class="nice tabs vertical">
-            <dd><a href="#home" class="main"><b>HOME</b></a></dd>
-            <dd><a href="#about" class="main"><b>About</b></a></dd>
-            <dd><a href="#performance" class="main"><b>Case Studies</b></a></dd>
-            <dd><a href="#planning" class="main"><b>Cats</b></a></dd>
-            <dd><a href="#marketing" class="main"><b>Blog</b></a></dd>
-            <dd><a href="#inventory" class="main"><b>Contact Us</b></a></dd>
-        </dl>
-        <a class="close-reveal-modal">&#215;</a>
-    </div>
-</body>
 </html>
